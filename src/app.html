@@ -1,0 +1,18 @@
+<template>
+  <require from="./app.scss"></require>
+  <h1>${message}</h1>
+
+
+  <p> Click checkbox then click toggle button twice. Checkbox will be unchecked even though value is true</p>
+
+  <button mdc-button
+          raised
+          click.delegate="toggle()">Toggle</button>
+
+  Checkbox Value: ${checkValue}
+
+  
+  <div if.bind=toggle1>
+    <mdc-checkbox checked.bind="checkValue"></mdc-checkbox>
+  </div>
+</template>
